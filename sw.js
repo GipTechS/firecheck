@@ -1,4 +1,4 @@
-const CACHE_NAME = 'firecheck-v2';
+const CACHE_NAME = 'firecheck-v3';
 
 const APP_SHELL = [
   './',
@@ -44,6 +44,9 @@ self.addEventListener('activate', (event) => {
 // Fetch: stale-while-revalidate — risponde dalla cache se disponibile e aggiorna in background
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+
+  // Le chiamate API a Supabase non vanno mai servite dalla cache: devono sempre riflettere i dati più recenti
+  if (event.request.url.includes('.supabase.co')) return;
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
