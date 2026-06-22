@@ -1,4 +1,4 @@
-const CACHE_NAME = 'firecheck-v3';
+const CACHE_NAME = 'firecheck-v4';
 
 const APP_SHELL = [
   './',
@@ -10,12 +10,12 @@ const APP_SHELL = [
   './script.js',
   './manifest.json',
   './icon.svg',
-  'https://unpkg.com/react@18/umd/react.production.min.js',
-  'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js',
-  'https://unpkg.com/@babel/standalone/babel.min.js',
-  'https://unpkg.com/@supabase/supabase-js@2',
-  'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.6.0/jspdf.plugin.autotable.min.js',
+  './lib/react.production.min.js',
+  './lib/react-dom.production.min.js',
+  './lib/babel.min.js',
+  './lib/supabase.js',
+  './lib/jspdf.umd.min.js',
+  './lib/jspdf.plugin.autotable.min.js',
   'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap'
 ];
 
