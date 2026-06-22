@@ -64,7 +64,7 @@
         const sourceCode = await resScript.text();
 
         const transformed = Babel.transform(sourceCode, {
-          presets: ['react', 'env']
+          presets: ['react']
         }).code;
 
         // 3) Esegui il codice trasformato
